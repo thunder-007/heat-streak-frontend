@@ -3,18 +3,20 @@ import React from "react";
 import {Button, Container} from 'react-bootstrap';
 
 function LogoutUser() {
-    axios.get('http://localhost:8000/auth/github/logout/',{
+    const serverAuthUrl = process.env.REACT_APP_SERVER_URL;
+    axios.delete(serverAuthUrl, {
         params: {
             access_token: localStorage.getItem('access_token')
         }
     }).then((response) => {
-        if(response.status === 200) {
+        if (response.status === 200) {
             console.log(response.data);
             localStorage.removeItem('access_token');
             window.location.href = '/';
         }
+    }).catch((error) => {
+        console.log(error);
     });
-
 }
 
 function HomePage() {

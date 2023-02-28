@@ -1,8 +1,14 @@
 import {Button, Container} from 'react-bootstrap';
 
 function LoginWithGithub() {
-    window.location.href = 'https://github.com/login/oauth/authorize?client_id=Iv1.453d62a00cdd585c&redirect_uri=http://localhost:3000/auth/github/';
-}
+    const github_auth_url = new URL('http://github.com/login/oauth/authorize');
+    const clientId = process.env.REACT_APP_GITHUB_OAUTH_CLIENT_ID;
+    const redirection_url = window.location.origin + '/auth/github';
+    github_auth_url.searchParams.set('client_id', clientId);
+    github_auth_url.searchParams.set('redirect_uri', redirection_url);
+    github_auth_url.searchParams.set('scope', 'repo,user');
+    window.location.href = github_auth_url.toString();
+}   
 
 function IndexPage() {
     return (
