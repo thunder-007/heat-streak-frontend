@@ -2,7 +2,6 @@ import './App.css';
 import HomePage from "./components/HomePage";
 import IndexPage from "./components/IndexPage";
 import AuthValidate from "./components/AuthValidate";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
