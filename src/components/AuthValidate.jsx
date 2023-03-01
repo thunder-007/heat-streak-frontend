@@ -3,7 +3,7 @@ import React from "react";
 
 function AuthValidate() {
     const code = new URLSearchParams(window.location.search).get('code');
-    const authUrl = process.env.REACT_APP_SERVER_URL + "auth/github/";
+    const authUrl = process.env.REACT_APP_SERVER_URL + "auth/github/login/";
     React.useEffect(() => {
         axios.get(authUrl, {
             params: {
