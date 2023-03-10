@@ -3,8 +3,8 @@ import React from "react";
 import {Button, Container} from 'react-bootstrap';
 
 function LogoutUser() {
-    const serverAuthUrl = process.env.REACT_APP_SERVER_URL;
-    axios.delete(serverAuthUrl, {
+    const serverAuthUrl = process.env.REACT_APP_SERVER_URL+'/auth/github/logout/';
+    axios.get(serverAuthUrl, {
         params: {
             access_token: localStorage.getItem('access_token')
         }
