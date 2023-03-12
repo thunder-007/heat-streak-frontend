@@ -1,8 +1,10 @@
 import './App.css';
-import HomePage from "./components/HomePage";
-import IndexPage from "./components/IndexPage";
+import HomePage from "./Pages/HomePage";
+import IndexPage from "./Pages/IndexPage";
 import AuthValidate from "./components/AuthValidate";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import AboutPage from './Pages/AboutPage';
+import ContactPage from './Pages/ContactPage';
 
 function App() {
     return (
@@ -10,6 +12,8 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={<IndexPage/>}/>
+                    <Route path="/about" element = {<AboutPage/>}/>
+                    <Route path="/contact" element = {<ContactPage/>}/>
                     <Route path={"/auth/github"} element={<AuthValidate/>}/>
                     <Route path={"/home"} element={<HomePage/>}/>
                 </Routes>

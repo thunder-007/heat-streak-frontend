@@ -1,3 +1,6 @@
+.navbar , .content{
+  font-family: 'Syne Mono', monospace;
+}
 @keyframes slide-in-left {
     0% {
       opacity: 0;
@@ -12,3 +15,5 @@
   .animate-slide-in-left {
     animation: slide-in-left 1s ease-out;
   }
+
+  
