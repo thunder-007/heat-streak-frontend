@@ -1,10 +1,11 @@
-// import { Button } from "@material-tailwind/react";
 import "./IndexPage.css";
 import NavBar from "../components/NavBar";
 import Before from "../assets/before.png";
 import After from "../assets/after.png";
 import { Button } from "@material-tailwind/react";
+import { useNavigate } from "react-router-dom";
 function IndexPage() {
+    const navigate  = useNavigate();
     function LoginWithGithub() {
         const github_auth_url = new URL('http://github.com/login/oauth/authorize');
         const clientId = process.env.REACT_APP_GITHUB_OAUTH_CLIENT_ID;
@@ -53,9 +54,9 @@ function IndexPage() {
                     👉Login to see the magic !
                 </div>
            </div>
-            <div className="mt-[6%] space-x-5">
-                <Button variant="primary" color="blue" onClick={LoginWithGithub}>Instructions</Button>
-                <Button variant="primary" color="blue" onClick={LoginWithGithub}>Login</Button>
+            <div className="mt-9 space-x-5">
+                <Button variant="primary" color="blue" onClick={()=>{navigate("/instruction")}}>Instructions</Button>
+                <Button variant="primary" color="blue" onClick={()=>{LoginWithGithub()}}>Login</Button>
             </div>
         </div>
         
