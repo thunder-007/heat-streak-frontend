@@ -1,5 +1,4 @@
 import "./IndexPage.css";
-import NavBar from "../components/NavBar";
 import Before from "../assets/before.png";
 import After from "../assets/after.png";
 import { Button } from "@material-tailwind/react";
@@ -18,7 +17,6 @@ function IndexPage() {
 
     return (
         <>
-        <NavBar />
         <div className='flex flex-col justify-center text-center content animate-slide-in-left '>
            <div className="flex space-x-5 justify-center mt-3">
                 <div className="border-b-2 border-transparent hover:border-blue-500 transition duration-300 ease-in-out"><a href="https://github.com/thunder-007" target="_blank" rel="noreferrer">🚀 @Thunder-007</a> </div>

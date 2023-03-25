@@ -6,11 +6,14 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
 import InstructionsPage from './Pages/InstructionsPage';
+import NavBar from './components/NavBar';
 
 function App() {
     return (
         <>
             <Router>
+            <NavBar />
+
                 <Routes>
                     <Route path="/" element={<IndexPage/>}/>
                     <Route path="/about" element = {<AboutPage/>}/>
