@@ -20,7 +20,6 @@ function IndexPage() {
         <div className='flex flex-col justify-center text-center content animate-slide-in-left '>
            <div className="flex space-x-5 justify-center mt-3">
                 <div className="border-b-2 border-transparent hover:border-blue-500 transition duration-300 ease-in-out"><a href="https://github.com/thunder-007" target="_blank" rel="noreferrer">🚀 @Thunder-007</a> </div>
-                <!--div className="border-b-2 border-transparent hover:border-blue-500 transition duration-300 ease-in-out"><a href="https://github.com/abhishekpm15" target="_blank" rel="noreferrer"> @abhishekpm15 🚀</a></div-->
            </div>
 
            <div className="flex flex-col mt-7 md:flex-row md:justify-center  md:space-x-10 md:mt-10">
